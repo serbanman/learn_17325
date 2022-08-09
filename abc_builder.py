@@ -21,7 +21,3 @@ class ABCBuilder(metaclass=ABCMeta):
     @abstractmethod
     def add_emblem(self):
         raise NotImplementedError
-
-    @abstractmethod
-    def add_header_text(self):
-        raise NotImplementedError

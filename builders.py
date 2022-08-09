@@ -11,10 +11,6 @@ class LadaBuilder(ABCBuilder):
     def save(self, filename):
         self.img.save(filename)
 
-    def add_header_text(self):
-        imgdraw = ImageDraw.Draw(self.img)
-        imgdraw.text((20,20), 'С помощью этой великой программы вы собрали: \n Ладу')
-
     def add_body(self):
         image_path = img_paths['lada']['body']
         new_image = Image.open(image_path, 'r')
@@ -41,9 +37,6 @@ class VolkswagenBuilder(ABCBuilder):
 
     def save(self, filename):
         self.img.save(filename)
-
-    def add_header_text(self):
-        pass
 
     def add_body(self):
         image_path = img_paths['volkswagen']['body']
@@ -74,9 +67,6 @@ class AudiBuilder(ABCBuilder):
     def save(self, filename):
         self.img.save(filename)
 
-    def add_header_text(self):
-        pass
-
     def add_body(self):
         image_path = img_paths['audi']['body']
         new_image = Image.open(image_path, 'r')
@@ -105,9 +95,6 @@ class FerrariBuilder(ABCBuilder):
 
     def save(self, filename):
         self.img.save(filename)
-
-    def add_header_text(self):
-        pass
 
     def add_body(self):
         image_path = img_paths['ferrari']['body']
