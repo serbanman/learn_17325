@@ -39,8 +39,7 @@ def main():
     else:
         filename = None
 
-    factory = Factory()
-    factory.builder = BUILDERS[model_choice]
+    factory = Factory(BUILDERS[model_choice])
     factory.construct()
     factory.get_result(save_choice, filename)
 
